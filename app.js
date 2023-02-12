@@ -83,4 +83,15 @@ console.log(empAlperName,empAlperLastName)
 empAction();
 
 
+//SPREAD OPERATORÜ 
 
+let numbers = [1,2,3,4,5,6]
+
+console.log(numbers)
+console.log(...numbers)
+
+let numbers2 = [12,13,...numbers] // Destructing
+
+
+console.log(numbers2)
+console.log(...numbers2)
