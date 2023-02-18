@@ -88,10 +88,73 @@ empAction();
 let numbers = [1,2,3,4,5,6]
 
 console.log(numbers)
-console.log(...numbers)
+console.log(...numbers)   // Spread
 
 let numbers2 = [12,13,...numbers] // Destructing
 
 
 console.log(numbers2)
 console.log(...numbers2)
+
+
+let arrayDeneme = [1,2,3,4,5,6,7,8]
+
+console.log(arrayDeneme)
+
+console.log(JSON.stringify(arrayDeneme))
+
+arrayDeneme.forEach(element => {
+    console.log(element)
+});
+
+let listDiv = document.createElement("div")
+document.body.appendChild(listDiv)
+let listElements = document.createElement("ul")
+listElements.style.listStyleType = "none"
+
+listDiv.appendChild(listElements)
+
+let elements = ["element1", "element2", "element3", "element4"]
+
+// Alternatif 2 
+
+let elements2 = {
+    element1 : "element1",
+    element2 : "element2",
+    element3 : "element3",
+    element4 : "element4"
+}
+
+
+
+console.log(elements2)
+
+console.log(JSON.stringify(elements2))
+
+
+
+
+elements.forEach(e  =>
+listElements.innerHTML += `
+<li>${e}</li>
+`
+)
+
+
+listElements.innerHTML +=`
+<li>${elements2.element1}</li>
+<li>${elements2.element2}</li>
+<li>${elements2.element3}</li>
+<li>${elements2.element4}</li>
+`
+listDiv.style.border = "solid 1px black" 
+listDiv.style.backgroundColor = "yellow"
+listDiv.style.display = "flex" 
+
+
+listDiv.innerHTML+= `
+<p>${elements2.element1}</p>
+`
+
+
+
